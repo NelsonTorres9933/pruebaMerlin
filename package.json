@@ -1,0 +1,15 @@
+{
+  "name": "pruebaMerlin",
+  "version": "1.0.0",
+  "description": "Prueba para Merlin",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Nelson Torres",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.2",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
