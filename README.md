@@ -35,13 +35,13 @@ Here is a [list of IDEs](https://www.keycdn.com/blog/best-ide) that you can view
 Clone the Test Automation repo and navigate to the cloned directory
 
 ```
-git clone
-cd
+git clone https://github.com/NelsonTorres9933/pruebaMerlin
+cd pruebaMerlin
 ```
 
 #### 2. Install repo modules:
 
-Install the dependencies to the local _node_modules_ folder. By default, `npm install` will install all modules listed as dependencies in `package.json` [file](/blob/master/package.json).
+Install the dependencies to the local _node_modules_ folder. By default, `npm install` will install all modules listed as dependencies in `package.json` [file](https://github.com/NelsonTorres9933/pruebaMerlin/blob/master/package.json).
 
 ```
 npm install
