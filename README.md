@@ -57,7 +57,7 @@ To run the Cypress tests use the following command:
 npx cypress run
 ```
 
-The test performs the screenshot found in the path [cypress/screenshots/spec.cy.js/](cypress/screenshots/spec.cy.js/)
+The test performs the screenshot found in the path [cypress/screenshots/](cypress/screenshots/)
 
 Two screenshots are created:
 
