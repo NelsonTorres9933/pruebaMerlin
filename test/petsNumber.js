@@ -1,7 +1,13 @@
 module.exports = class petsNumber {
-  sameName(array) {
+  dict;
+
+  constructor(dict) {
+    this.dict = dict;
+  }
+
+  async sameName() {
     let counts = {};
-    array.forEach((element) => {
+    this.dict.forEach((element) => {
       counts[element.name] = (counts[element.name] || 0) + 1;
     });
     return counts;

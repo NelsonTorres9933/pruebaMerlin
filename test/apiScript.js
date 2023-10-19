@@ -9,7 +9,7 @@ let petsSold = [];
 
 describe("Data processing in APIs", function () {
   it("Create user", async function () {
-    request(endpoint)
+    await request(endpoint)
       .post("user/createWithArray")
       .send(userInfo)
       .set("Accept", "application/json")
@@ -20,7 +20,7 @@ describe("Data processing in APIs", function () {
   });
 
   it("Retrieve user info", async function () {
-    request(endpoint)
+    await request(endpoint)
       .get("user/" + userInfo[0].username)
       .expect(200)
       .then((res) => {
@@ -33,7 +33,7 @@ describe("Data processing in APIs", function () {
   });
 
   it("Names of pets that have been sold", async function () {
-    request(endpoint)
+    await request(endpoint)
       .get("pet/findByStatus?status=sold")
       .expect(200)
       .then((res) => {
@@ -50,10 +50,10 @@ describe("Data processing in APIs", function () {
   });
 
   it("How many pets have the same name", async function () {
-    const pets = new petsNumber();
-    let numberOfPets = pets.sameName(petsInfo);
+    const pets = new petsNumber(petsInfo);
+    let numberOfPets = await pets.sameName();
     let data = JSON.stringify(numberOfPets);
-    fs.writeFile("fixtures/numberOfPets.json", data, function (err) {
+    await fs.writeFileSync("fixtures/numberOfPets.json", data, function (err) {
       if (err) throw err;
     });
   });
